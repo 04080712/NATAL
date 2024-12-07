@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Natal!</title>
+    <link rel="stylesheet" href="/Arquivo_principal/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+    </style>
+</head>
+<body>
+    <div class="tudo">
+        <button id="openButton" class="button" type="button">
+            Clique aqui
+            <img class="button-hat" src="https://assets.codepen.io/4175254/santa-hat-test-9.png" alt="">
+        </button>
+        <div id="popup" class="overlay">
+            <div class="popup">
+                <button id="closeButton" class="close-button">×</button>
+                <div class="popup-content">
+                    <h2>🎄Feliz Natal!🎄</h2>
+                    <p id="message"> João Lucas te deseja um Feliz Natal!</p>
+                    <audio id="myAudio" autoplay loop>
+                        <source src="/Arquivo_principal/jingle_bell_rock.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="conteiner">
+                        <div class="imagem">
+                            <img src="/Arquivo_principal/familia.png" alt="Familia Feliz">
+                        </div>
+                    </div>
+                    <div class="linq">
+                        <a href="https://wa.me/5592982899367?text=Feliz Natal João Lucas!!">🎅🏼 Mandar feliz natal 🎉</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <canvas class="canvas"></canvas>
+    <script src="/Arquivo_principal/neve.js"></script>
+    <script>
+        // Garante que o áudio toque ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(error => {
+                console.log('Reprodução automática bloqueada. Interação necessária.');
+            });
+        });
+    </script>
+</body>
+</html>
